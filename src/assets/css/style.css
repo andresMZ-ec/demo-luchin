@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700;900&display=swap');
+
+
+@import url('./home.css');
+
+
+/*VARIABLES DE FUENTES, COLOR, ETC QUE SE USAN MULTIPLES VECES*/
+:root{
+    --color-text-negro: #000103;
+    --color-text-negro-bajo: #212529;
+    --color-text-input: #707070;
+    --color-brd-input: #7070708c;
+    --color-blanco: #ffff;
+    --color-vino: #370617;
+    --color-vino-50: #3706177c;
+    --color-amarillo: #f48c06;
+    --color-amarillo-principal: #ffba08;
+    --color-naranja: #e85d04;
+    --color-naranja-bajo: #f48c08;
+    --color-rojo: #d00000;
+    --color-rojo-oscuro: #9d0208;
+    --color-azul-fuerte: #03071E;
+
+    --bg-admin: #E2E7F1;
+    --bg-admin-hv: #d3d7dd;
+
+
+    --amarillo: #f48c06;
+    --azul-fuerte: #03071E;
+    --azul-opacity-50: #03071e88;
+    --blanco: #ffff;
+    --bg-dark: #212529;
+    --color-aprobado: #38b000;
+    --color-reprobado: #c1121f;
+    --color-submit: rgb(0, 74, 171);
+
+
+    /* FRANKLIN FUENTE */
+    --fuente-FRANKLIN: 'Libre Franklin', sans-serif;
+        --weight-FKlin-700: 700;
+        --weigth-Flin-900: 900;
+
+
+    /*FUENTE "OSWALD" (GRANDE PRINCIPAL)*/
+    --fuente-OSWALD: 'Oswald', sans-serif;
+    --weigth-OSWALD-LIGTH-300: 300;             /* ANCHO DE LETRA FINA DE OSWALD */
+    --weigth-OSWALD-REGULAR-400: 400;           /* ANCHO DE LETRA NORMAL DE OSWALD */
+    --weigth-OSWALD-SEMIBOLD-600: 600;          /* ANCHO DE LETRA SEMI ANCHA DE OSWALD */
+    --weigth-OSWALD-BOLD-700: 700;              /* ANCHO DE LETRA ANCHA DE OSWALD */
+
+
+    /*FUENTE "OPEN SANS" (PARA TEXTOS. PARRAFOS O ETIQUETAS)*/
+    --fuente-OPENSANS: 'Open Sans', sans-serif;
+    --weigth-OPENSANS-LIGTH-300: 300;             /* ANCHO DE LETRA FINA DE OSWALD */
+    --weigth-OPENSANS-REGULAR-400: 400;           /* ANCHO DE LETRA NORMAL DE OPEN SANS */
+    --weigth-OPENSANS-SEMIBOLD-600: 600;          /* ANCHO DE LETRA SEMI ANCHA DE OPEN SANS */
+    --weigth-OPENSANS-BOLD-700: 700;              /* ANCHO DE LETRA ANCHA DE OPEN SANS */
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main:not(main[class*=contenido-admin]){
+    margin-top: 70px;
+}
+@media only screen and (max-width: 960px) {
+    main:not(main[class=contenido-admin]){
+        margin-top: 60px;
+    }
+}
+
+/*-----------MENSAJE DE ADD O NOT ADD A LA BOLSA*/
+.box-sms{
+    background-color:#fff;
+    color: var(--color-text-negro);
+    font-family: var(--fuente-OPENSANS);
+    font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px #000;
+    transition: all ease .5s;
+    
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 100;
+    visibility: hidden;
+}
+    .box-sms.active{
+        visibility: visible;
+    }
+    .txt-sms{
+        display: flex;
+        align-items: center;
+    }
+    .txt-sms.aprobado>i{
+        padding-left: 10px;
+        color: var(--color-aprobado);    
+    }
+    .txt-sms.reprobado>i{
+        padding-left: 10px;
+        color: var(--color-reprobado);    
+    }
+    .box-sms .lay{
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        transform: rotate(45deg);
+        
+        position: absolute;
+        top: -5px;
+        right: 30px;
+    }
+
+
+/* =============================================================
+            ESTILOS PARA FORMULARIOS USUARIO
+============================================================= */
+.container_fields_us {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    font-family: var(--fuente-OPENSANS);
+}
+.container_fields_us p[class*=field_u]{
+    padding-bottom: 15px;
+    margin: 0;
+    grid-column-start: span 2;
+}
+    .container_fields_us .field_u.div{
+        grid-column-start: span 1;
+    }
+.field_u label{
+    display: block;
+    color: var(--color-text-negro-bajo);
+    font-weight: var(--weigth-OPENSANS-REGULAR-400);
+    font-size: .85rem;
+    padding-bottom: 10px;
+}
+.field_u input, textarea{
+    display: block;
+    width: calc(100% - 30px);
+    padding: 7px 15px;
+    outline: none;
+    border: 1px solid var(--color-brd-input);
+    border-radius: 5px;
+    background: none;
+    color: var(--color-text-negro-bajo);
+    font-size: .95rem;
+}
+.field_u .text_area{
+	font-family: var(--fuente-OPENSANS);
+    text-align: left;
+    height: 70px;
+    display: block;
+    resize: none;
+}
+
+/* ========================================= */
+            /* MENSAJES DE ALERTS */
+/* ========================================= */
+p[class*=alert_]{
+    font-size: .85rem;
+    margin: 7px 0 0 0;
+    color: var(--color-text-input);
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 110%;
+    font-weight: 500;
+}
+    p[class*=alert_send]{color: var(--color-aprobado)}
+    p[class*=alert_error]{color: var(--color-reprobado)}
+
+p[class*=content-empty]{
+    display: flex;
+    width: 100%;
+    margin: 50px 0;
+    line-height: 100%;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-text-input);
+}

@@ -1,0 +1,173 @@
+@import url("../admin.css");
+
+.main-auth-users{
+  display: flex;
+  width: 100vw;
+  height: 100vh;  
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  font-family: var(--fuente-OPENSANS);
+}
+.present-slide{
+  width: calc(100% - 400px);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+  .present-slide .overflow{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      background-color: rgba(0, 0, 0, .4);
+  }
+  .present-slide img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+.autentif-forms{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 35px;
+  justify-content: center;
+  background-color: var(--color-blanco);
+}
+  .head-form .brand-logo{
+      width: 100px;
+      max-height: 100px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      margin-bottom: 15px;
+  }
+      .head-form .brand-logo>img{
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+      }
+      .head-form .topic-form-aut, .instruct-form{
+          color: var(--color-text-negro-bajo);
+          font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+          font-size: 1.3rem;
+          margin: 0;
+      }
+      .head-form .instruct-form{
+          margin: 10px 0;
+          color: var(--color-text-negro-bajo);
+          opacity: 70%;
+          font-size: .9rem;
+      }
+  .form-dash-ctn{
+      padding: 10px;
+  }
+      .form-dash-ctn .box-input{
+          margin-bottom: 10px;
+      }
+          .box-input label{
+              display: block;
+              color: var(--color-text-input);
+              font-weight: 600;
+              font-size: .9rem;
+              padding: 5px 10px;
+          }
+          .box-input input{
+              border: 2px solid var(--bg-admin-hv);
+              outline: none;
+              font-size: .9rem;
+              padding: 12px;
+              border-radius: 5px;
+              width: calc(100% - 30px);
+              color: var(--color-text-input);
+              font-weight: var(--weigth-OPENSANS-REGULAR-400);
+              transition: all ease .5s;
+          }
+              .box-input input:focus{
+                  border: none;
+                  border-bottom: 4px solid var(--color-rojo-oscuro);
+              }
+      
+          .form-dash-ctn .send_form-dash{
+              border: none;
+              color: var(--color-blanco);
+              background: var(--color-rojo-oscuro);
+              width: 100%;
+              height: 35px;
+              margin-top: 20px;
+              border-radius: 5px;
+              font-size: .8rem;
+              cursor: pointer;
+          }
+              .form-dash-ctn .send_form-dash:hover{
+                  background: var(--color-rojo);
+              }
+          .autentif-forms .more_actionn{
+              color: var(--color-text-negro-bajo);
+              font-size: .8rem;
+              text-align: center;
+              margin-top: 15px;
+          }
+          .autentif-forms .more_actionn .redirect-page{
+              color: var(--color-rojo-oscuro);
+              text-decoration: none;
+          }
+
+
+/* -----------VENTANA DE CONFIRMACION DE CORREO ELECTRONICO (REUTILIZABLE)----------- */
+.olay-confirm{
+  display: flex;
+  width: 100vw;
+  height: 100vh;  
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-admin);
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.vent-modal-mssg{
+  background-color: var(--color-blanco);
+  padding: 30px 60px;
+  width: 400px;
+}
+  .vent-modal-mssg .brand-logo{
+      width: 40%;
+      max-height: 100px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      margin-bottom: 15px;
+  }
+      .vent-modal-mssg .brand-logo>img{
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+      }
+  .vent-modal-mssg .mssg{
+      margin-top: 30px;
+      font-family: var(--fuente-OPENSANS);
+      text-align: center;
+  }
+      .vent-modal-mssg .mssg .title_mssg{
+          color: var(--color-text-negro-bajo);
+          font-size: 1.1rem;
+          margin: 0;
+      }
+      .vent-modal-mssg .mssg .details_mssg{
+          color: var(--color-text-input);
+          font-size: .9rem;
+          font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+      }
+

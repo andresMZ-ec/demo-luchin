@@ -1,0 +1,170 @@
+/*Codificado Eddy*/
+.sub-ttlo {
+    color: var(--color-amarillo-principal);
+    text-align: center;
+    font-family: var(--fuente-OSWALD);
+    font-size: 40px;
+}
+.contenedor-promox {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+.caja_columna {
+    width: 80%;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+    .caja {
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 10px 15px var(--color-text-input); 
+        transition-delay: 5s;
+        transition: all ease 1s;
+    }
+        .caja_columna .caja:hover{
+            grid-row-start: span 2;
+        }
+        .caja_columna .caja:hover .detalle-product .descripcion{
+            display: block;
+        }
+    .caja>img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+
+        transition: all ease .4s;
+    }
+    .caja .detalle-product{
+        overflow: hidden;
+        padding: 10px 30px;
+    }
+    .caja .detalle-product .name-producto {
+        font-family: var(--fuente-FRANKLIN);
+        color: var(--color-text-negro-bajo);
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        margin: 0;
+        font-weight: 900;
+    }
+    .caja .detalle-product .price{
+        font-family: var(--fuente-FRANKLIN);
+        font-weight: bold;
+        color: var(--color-amarillo-principal);
+        margin: 0 auto;
+        width: 90%;
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: space-between;
+    }
+        .caja .detalle-product .price>span s{  
+            color: var(--color-rojo);
+            font-size: 1.1rem;
+        }
+    .caja .detalle-product .descripcion{
+        color: var(--color-text-input);
+        font-family: var(--fuente-OPENSANS);
+        display: none;
+    }
+
+
+/*Codificado Mendoza*/
+.main-banner-img img {
+    height: auto;
+    width: 100%;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.promo-recient{
+    display: flex;
+    justify-content: center;
+}
+    .contenido-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        position: relative;
+        cursor: pointer;
+    }
+        .box-prom-rec {
+            text-align: center;
+            width: 500px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 15px var(--color-text-input);
+            transition: all ease .5s;
+        }
+
+        .box-prom-rec>img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            opacity: 100%;
+            transition: all ease .4s;
+        }
+
+        .box-prom-rec .detalle {
+            padding: 12px 25px;
+            z-index: 1;
+        }
+        
+        .box-prom-rec .detalle .topicc {
+            font-family: var(--fuente-FRANKLIN);
+            font-weight: var(--weigth-Flin-900);
+            color: var(--color-text-negro-bajo);
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin: 0;
+            transition: all ease .4s;
+        }
+        .box-prom-rec .detalle .descripcion{
+            color: var(--color-text-input);
+            font-family: var(--fuente-OPENSANS);
+        }
+        
+        .box-prom-rec .detalle .descripc {
+            font-family: var(--fuente-FRANKLIN);
+            color: var(--color-amarillo-principal);
+            font-size: 1.5rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            transition: all ease .5s;
+            width: 90%;
+        }
+
+            .box-prom-rec .detalle .descripc s{
+                color: var(--color-rojo);
+                font-size: 1rem;
+            }
+
+        .box-prom-rec:hover {
+            box-shadow: 0 10px 15px var(--color-text-negro);
+        }
+
+        .box-prom-rec:hover img {
+            height: 300px;
+        }
+        @media only screen and (max-width:1000px){
+            .contenido-grid {
+                grid-template-columns: repeat(1, 1fr);
+                width: 100%;
+            }
+            .box-prom-rec{
+                width: auto;
+                margin: 0 20px 0 20px;
+            }
+            .caja_columna {
+                width: 80%;
+                grid-template-columns: repeat(1, 1fr);
+                cursor: pointer;
+            }
+        .caja_columna .caja:hover .detalle-product .descripcion{
+            display: none;
+        }
+        }
+

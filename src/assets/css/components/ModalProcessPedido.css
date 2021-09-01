@@ -1,0 +1,63 @@
+@import url(../style.css);
+
+.over_proc{
+    background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 60px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    z-index: 4;
+    visibility: hidden;
+}
+    .over_proc.active{
+        visibility: visible;
+    }
+
+.vent_modal_prcc{
+  font-family: var(--fuente-OPENSANS);
+  text-align: center;
+  background-color: var(--color-blanco);
+  padding: 20px;
+  width: 250px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  .vent_modal_prcc .loader_prcc{
+    display: flex;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+  }
+  .vent_modal_prcc .loader_prcc>img{
+    height: 100%;
+  }
+  .vent_modal_prcc .contend_prcc{
+    padding: 15px 0;
+  }
+  .contend_prcc .btn_subm_home{
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-top: 15px;
+    color: var(--color-blanco);
+    text-transform: uppercase;
+    font-size: .85rem;
+    border: none;
+    background-color: var(--color-aprobado);
+  }
+  .contend_prcc .btn_subm_home:hover{
+    background-color: #2d8f00;
+  }
+
+@media only screen and(max-width: 540px) {
+  .over_proc{
+    align-items: center;
+  }
+}
+  

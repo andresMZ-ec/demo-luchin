@@ -1,0 +1,128 @@
+.main_process-pay{
+    margin: 70px auto;
+    font-family: var(--fuente-OPENSANS);
+    color: var(--color-text-negro-bajo);
+    width: 90%;
+}
+    .main_process-pay > .proceso_compra{    
+        padding: 40px 0; 
+        display: flex;
+        font-family: var(--fuente-OSWALD);
+        font-weight: var(--weigth-OSWALD-SEMIBOLD-600);
+        font-size: 1.7rem;
+    }
+    .proceso_compra>p{
+        border-bottom: 5px solid var(--color-amarillo-principal);
+        margin: 0;
+    }
+.main_process-pay>form{
+    width: 100%;
+    display: grid;
+    grid-gap: 10%;
+    grid-template-columns: 55% 35%;
+}
+.infor-general{
+    width: 100%;
+}
+.title-group-item{
+    margin: 15px 0;
+    font-family: var(--fuente-OSWALD);
+    font-size: 25px;
+    font-weight: var(--weigth-OSWALD-SEMIBOLD-600);
+    text-align: left;
+    color: var(--color-amarillo-principal);
+}
+    
+/*Cuadro de pago*/
+.resume{
+    width: calc(100% - 60px);
+    padding: 15px 30px;
+    border-top: 5px solid var(--color-azul-fuerte);
+}
+.topic-resume{
+    margin: 0;
+    font-weight: bold;
+    color: var(--azul-fuerte);
+    margin-bottom: 10px;
+}
+.group-detalle_res{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    font-size: .9rem;
+    text-align: left;
+    color: var(--azul-fuerte);
+    margin-bottom: 10px;
+}
+    .group-detalle_res.pago{
+        grid-template-columns: 70% 30%;
+        margin-top: 15px;
+        align-items: center;
+    }
+    .group-detalle_res .topic{
+        font-weight: var(--weigth-OSWALD-SEMIBOLD-600);
+    }
+        .group-detalle_res.pago .topic{
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    .group-detalle_res .data-resume{
+        color: var(--color-text-input); 
+    }
+        .group-detalle_res.pago .data-resume{
+            text-align: end;
+            color: var(--color-azul-fuerte);
+            font-family: var(--fuente-OSWALD);
+            font-size: 1.6rem;
+        }
+.guardar_pago{
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    background-color: var(--azul-fuerte);
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--blanco);
+    cursor: pointer;
+    border: none;
+}
+
+@media only screen and (max-width:960px){
+    .main_process-pay{
+        width: 80%;
+    }
+    .main_process-pay>form{
+        margin: 0 auto;
+        grid-row-gap: 20px;
+        grid-template-columns: 1fr;
+    }
+    .cont_resume{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .resume{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .cont_resume .guardar_pago{
+        width: 80%;
+        margin: auto;
+    }
+    .group-detalle_res .data-resume{
+        text-align: end;
+    }
+}
+@media only screen and (max-width:540px){
+    .infor-general div.container_fields_us{
+        display: flex;
+        flex-direction: column;
+    }
+    .resume{
+        width: calc(100% - 60px);
+    }
+    .cont_resume .guardar_pago{
+        width: 100%;
+    }
+}

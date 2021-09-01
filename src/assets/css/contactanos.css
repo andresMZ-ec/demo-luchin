@@ -1,0 +1,180 @@
+main section[class*='contact-']{
+    /* background: var(--color-vino); */
+    font-family: var(--fuente-OPENSANS);
+    padding: 40px 0 50px 0;
+}
+    section[class*='contact-'] .theme-section{
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: var(--color-azul-fuerte);
+        margin: 0;
+        padding-bottom: 60px;
+        font-size: 2.2rem;
+    }
+.contenedor_contac{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedor_contac .column{
+    width: 50%;
+}
+
+.form-contact{
+    /* background-color: var(--color-azul-fuerte); */
+    padding: 20px 30px;
+    width: 400px;
+}
+.title_contac_izq{
+    color: var(--color-text-negro-bajo);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+.contact_item p{
+    margin: 0;
+    width: 100%;
+    margin-bottom: 15px;
+}
+    .contact_item.group{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+.contact_item label{
+    display: block;
+    color: var(--color-text-negro-bajo);
+    font-weight: var(--weigth-OPENSANS-REGULAR-400);
+    font-size: .9rem;
+    padding-bottom: 10px;
+}
+.contact_item .input_contact{
+    display: block;
+    width: calc(100% - 30px);
+    padding: 10px 15px;
+    outline: none;
+    border: 1px solid var(--color-brd-input);
+    border-radius: 5px;
+    background: none;
+    color: var(--color-text-negro-bajo);
+    font-size: .95rem;
+}
+    .input_contact.text{
+        font-family: var(--fuente-OPENSANS);
+        text-align: left;
+        width: calc(400px - 30px);
+        height: 70px;
+        display: block;
+        resize: none;
+    }
+
+.btn_send-contact{
+    cursor: pointer;
+    color: var(--color-blanco);
+    background-color: var(--color-azul-fuerte);
+    border: none;
+    padding: 10px 30px;
+    margin: 10px 0;
+    border-radius: 7px;
+}
+
+.anuncio{
+    display: grid;
+    grid-template-columns: 100px 300px;
+    justify-content: flex-end;
+    grid-gap: 20px;
+    align-items: center;
+    padding-bottom: 40px;
+}
+    .contac_icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        margin: 0 auto ;
+        background-color:var(--color-amarillo-principal);
+        border-radius: 50%;
+        color: var(--color-azul-fuerte);
+        font-size: 2rem;
+    }
+    .contac_description p{
+        margin: 0;
+    }
+        .contac_description .detalle:hover:not(.topic, .detalle.iconos){
+            color: var(--color-amarillo);
+        }
+    .contac_description .topic{
+        color: var(--color-azul-fuerte);
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+    .contac_description .detalle{
+        color: var(--color-azul-fuerte);
+        font-size: 1rem;
+        text-decoration: none;
+    }
+        .contac_description .detalle.iconos{
+            display: grid;
+            grid-template-columns: repeat(2, 25px);
+            font-size: 1.3rem;
+            grid-gap: 15px;
+        }
+        .detalle.iconos>a{
+            color: var(--color-azul-fuerte);
+            text-decoration: none;
+            margin: auto;
+        }
+        .detalle.iconos>a:hover{
+            color:  var(--color-amarillo);
+        }
+
+.section-ubi{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-azul-fuerte);
+    color: var(--color-blanco);
+    padding: 30px 0;
+    font-family: var(--fuente-OPENSANS);
+}
+    .section-ubi .container-ubicacion{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 85%;
+    }
+    .section-ubi .container-ubicacion>h1{
+        font-family: var(--fuente-FRANKLIN);
+        font-weight: bold;
+        margin: 0;
+        line-height: 100%;
+    }
+.container-ubicacion .ubi_detalle{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 80px 100%;
+}
+    .ubi_detalle .ico_ubi{
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        color: var(--color-azul-fuerte);
+        background-color: var(--color-amarillo-principal) ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 1.8rem;
+    }
+    .ubi_detalle .descr>p{
+        margin: 0;
+        font-size: 1.1rem;
+    }
+    .ubi_detalle .descr>p.bold{
+        font-weight: bold;
+    }
+    

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Bebidas",
+        "image": "https://images.getduna.com/2bb258f4-051d-4a46-9321-b0a7a857cd71/domicilio_149_744x744.png?d=300x300"        
+    },
+    {
+        "id": 2,
+        "name": "Hamburguesas",
+        "image": "https://toptenburgersandfries.com/wp-content/uploads/2020/06/Hamburguesa-double-top.png"
+    },
+    {
+        "id": 3,
+        "name": "Carnes",
+        "image": "https://images.rappi.com.ec/products/1082100-1614979523034.png?d=136x136"
+    },
+    {
+        "id": 4,
+        "name": "Papas Fritas",
+        "image": "https://aquiprogreso.net/772-large_default/papas-fritas.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Alitas",
+        "image": "https://faustinoyjosedamian.com/wp-content/uploads/2019/04/desarrollos-de-pollo.png"
+    },
+    {
+        "id": 6,
+        "name": "Sanduches",
+        "image": "https://i.stack.imgur.com/Jq5J2.png"
+    }
+]

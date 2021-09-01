@@ -1,0 +1,372 @@
+.overlay{
+    background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 60px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    z-index: 4;
+    visibility: hidden;
+}
+    .overlay.active{
+        visibility: visible;
+    }
+.popup{
+    width: 750px;
+    font-family: var(--fuente-OPENSANS);
+    background: var(--color-blanco);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+	text-align: center;
+    display: flex;
+    transform: scale(0);
+    opacity: 0;
+    transition: .5s ease all;
+}
+    .overlay.active .popup{
+        transform: scale(1);
+        opacity: 1;
+    }
+.iz{
+    width: 45%;
+    background-color: var(--color-amarillo-principal);
+    padding: 15px 25px;	
+}
+    .btn_regresar{
+        font-family: var(--fuente-OSWALD);
+        background-color: transparent;
+        color: var(--color-blanco);
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+    }
+        .btn_regresar>i{
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+    .btn_regresar:hover{
+        color: var(--color-vino);
+    }
+    .photo_comida{
+        position: relative;
+        width: 100%;
+        height: 90%;
+        display: flex;
+    }
+        .popup .titulo{
+            text-transform: uppercase;
+            flex-wrap: wrap;
+            line-height: 100%;
+            font-family: var(--fuente-OSWALD);
+            color: var(--color-blanco);
+            width: 100%;
+            font-size: 2.1rem;
+            text-align: left;
+            margin: 10px 0;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .photo_comida .food_img{
+            width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+.der{
+	width: 55%;
+    display: flex;
+    flex-direction: column;
+	padding: 30px 50px;	
+}
+    .primer{
+        flex: 0 1 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--fuente-OSWALD);
+        color: var(--color-text-negro-bajo);
+        margin-bottom: 15px;
+    }
+        .primer .precio{
+            font-size: 2.3rem;
+            margin: 0;
+            line-height: 100%;
+        }
+        .primer .cant{
+            display: flex;
+            align-items: center;
+        }
+        .cant>p{
+            margin: 0;
+            padding-right: 15px;
+            font-size: 1.2rem;
+        }
+        .cant .btn_can{
+            background:  var(--color-amarillo-principal);
+            border: none;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            font-size: calc(1rem - 6px);
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--color-vino);
+            font-weight: var(--weigth-OSWALD-SEMIBOLD-600);
+        }
+            .cant .btn_can:hover{
+                background: var(--color-amarillo);
+            }
+        .cant>input{
+            font-size: 1rem;
+            color: var(--color-vino);
+            width: 30px;
+            border: none;
+            outline: none;
+            text-align: center;
+        }
+
+    .des{
+        flex: 0 1 auto;
+        text-align: start;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+        .des>h3{
+            color: var(--color-text-negro-bajo);
+            font-family: var(--fuente-OSWALD);
+            font-weight: var(--weigth-OSWALD-REGULAR-400);
+            margin: 0;
+            font-size: .9rem;
+        }
+        .des>p{
+            overflow: auto;
+            max-height: 72px;
+            margin: 0;
+            font-size: .75rem;
+            color: var(--color-text-input);
+        }
+    .adicional{
+        text-align: start;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+        .adicional>h3{
+            color: var(--color-text-negro-bajo);
+            font-weight: var(--weigth-OSWALD-SEMIBOLD-600);
+            line-height: 110%;
+            margin: 0;
+            font-size: .8rem;
+        }
+        .input-adicional{
+            margin-top: 10px;
+            width: calc(100% - 24px);
+            resize: none;
+            outline: none;
+            padding: 5px 12px;
+            font-family: var(--fuente-OPENSANS);
+            font-size: .8rem;
+            height: 70px;
+            border: 1px solid var(--color-brd-input);
+            border-radius: 5px;
+            color: var(--color-vino);
+        }
+        .adicional>.inf-import{
+            font-size: .6rem;
+            line-height: 100%;
+            margin: 0;
+            color: rgba(0,0,0,.6);
+        }
+
+    .cl-btn-agg{
+        display: flex;
+        justify-content: flex-end;
+    }
+        .btn_añadir{
+            width: 150px;
+            height: 32px;
+            background-color: var(--color-vino);
+            color: var(--color-blanco);
+            font-family: var(--fuente-OSWALD);
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            
+            font-size: .9rem;
+            transition: all ease .3s;
+        }
+            .btn_añadir:hover{
+                background-color: var(--color-aprobado);
+                color: var(--color-text-negro);
+                
+            }
+
+@media only screen and (max-width:960px){
+    .popup{
+        width: 650px;
+    }
+}
+@media only screen and (max-width:720px){
+    .overlay{
+        display: block;
+    }
+    .popup{
+        overflow: scroll;
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding-bottom: 50px;
+    }
+    .iz{
+        width: 100%;
+        padding: 50px 0;
+    }
+        .btn_regresar{
+            margin-left: 7%;
+        }
+        .btn_regresar, .btn_regresar>i{
+            font-size: 5vw;
+        }
+            .btn_regresar>i{
+                margin-right: 15px;
+            }
+        .photo_comida{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .popup .titulo{
+            left: 10%;
+            right: 10%;
+            font-size: 10vw;
+            bottom: 0;
+            top: auto;
+            width: auto
+        }
+        .photo_comida .food_img{
+            width: 80%;
+        }
+    .der{
+        width: 80%;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+        .prime{
+            margin-bottom: 20px;
+        }
+        .primer .precio{
+            font-size: 7vw;
+        }
+            .cant>p{
+                font-size: 4vw;
+            }
+            .cant .btn_can{
+                width: 35px;
+                height: 35px;
+                font-size: 2.5vw;
+            }
+            .cant>input{
+                font-size: 2.7vw;
+            }
+        .des{
+            margin-bottom: 20px;
+        }
+            .des>h3{
+                font-size: 4vw;
+            }
+            .des>p{
+                font-size: 1.2rem;
+                max-height: 100%;
+            }
+        .adicional{
+            margin-bottom: 40px;
+        }
+            .adicional>h3{
+                font-size: 3.6vw;
+            }
+            .input-adicional{
+                margin-top: 15px;
+                font-size: 1.2rem;
+                height: 100px;
+            }
+            .adicional>.inf-import{
+                font-size: 1.19rem;
+            }
+        .btn_añadir{
+            width: 100%;
+            height: 55px;
+            font-size: 1.3rem;
+        }
+}
+
+@media only screen and (max-width:540px){
+    .popup .titulo{
+        left: 7.5%;
+        right: 7.5%;
+        font-size: 10vw;
+        bottom: 0;
+        top: auto;
+        width: auto
+    }
+        .btn_regresar, .btn_regresar>i{
+            font-size: 7vw;
+        }
+    .photo_comida .food_img{
+        width: 85%;
+    }
+    .der{
+        width: 85%;
+    }
+        .primer{
+            margin-bottom: 25px;
+        }
+        .primer .precio{
+            font-size: 8vw;
+        }
+            .cant>p{
+                font-size: 4.5vw;
+            }
+            .cant .btn_can{
+                width: 30px;
+                height: 30px;
+                font-size: 3vw;
+            }
+            .cant>input{
+                font-size: 5vw;
+            }
+
+        .des{
+            margin-bottom: 25px;
+        }
+            .des>h3{
+                font-size: 5.7vw;
+            }
+            .des>p{
+                font-size: 3.7vw;
+            }
+        .adicional{
+            margin-bottom: 40px;
+        }
+            .adicional>h3{
+                font-size: 4vw;
+            }
+            .input-adicional{
+                margin-top: 15px;
+                font-size: 3.5vw;
+                height: 100px;
+            }
+            .adicional>.inf-import{
+                font-size: 2.8vw;
+            }
+        .btn_añadir{
+            width: 100%;
+            height: 50px;
+            font-size: 5vw;
+        }
+}

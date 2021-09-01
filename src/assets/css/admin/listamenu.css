@@ -1,0 +1,100 @@
+.grid_producto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, calc(95% / 3));
+  grid-gap: 20px;
+  grid-template-rows: minmax(auto, 318.167px);
+  justify-content: center;
+}
+.card-cat-plt {
+  padding: 15px 17px;
+  color: var(--color-text-negro-bajo);
+  font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+  background: var(--color-blanco);
+}
+.card-cat-plt .title_card_cl.sub {
+  line-height: 100%;
+  margin-bottom: 5px;
+}
+
+.card-cat-plt button[class*="button-platillo"] {
+  border-radius: 5px;
+  width: 30px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  font-size: 0.75rem;
+  transition: all ease 0.3s;
+}
+.card-cat-plt button[class*="button-platillo"] i {
+  font-weight: bold;
+}
+.button-platillo-delete {
+  background: var(--color-rojo-oscuro);
+  color: var(--color-blanco);
+}
+.button-platillo-delete:hover {
+  background-color: var(--color-blanco);
+  color: var(--color-reprobado);
+}
+
+.button-platillo-edit {
+  background: var(--color-amarillo-principal);
+  color: var(--color-text-negro-bajo);
+}
+.button-platillo-edit:hover {
+  background-color: var(--color-amarillo);
+  color: var(--color-blanco);
+}
+.cont_table_card {
+  max-height: 260px;
+  overflow: auto;
+}
+.cont_table_card::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.cont_table_card::-webkit-scrollbar-thumb {
+  background: var(--color-reprobado);
+  border-radius: 0px;
+}
+.cont_table_card::-webkit-scrollbar-thumb:hover {
+  background: var(--color-amarillo-principal);
+}
+.cont_table_card::-webkit-scrollbar-track {
+  background: var(--color-blanco);
+  border-radius: 0px;
+  box-shadow: inset 0px 0px 0px 0px var(--color-blanco);
+}
+
+.cont_table_card table {
+  border-collapse: collapse;
+  font-family: var(--fuente-OPENSANS);
+  text-align: center;
+  width: 100%;
+}
+.cont_table_card table tbody tr {
+  font-size: 0.7rem;
+}
+.cont_table_card table tbody tr:hover {
+  background-color: var(--bg-admin);
+}
+.cont_table_card table tbody td {
+  font-weight: var(--weigth-OPENSANS-REGULAR-400);
+  color: var(--color-text-input);
+  padding: 10px 10px;
+  line-height: 105%;
+}
+.cont_table_card table tbody td.price {
+  font-family: var(--fuente-OSWALD);
+  font-size: 0.8rem;
+}
+
+.cont_table_card table thead th {
+  border-bottom: 1.5px solid var(--color-brd-input);
+  font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+  color: var(--color-text-input);
+  font-size: 0.85rem;
+  padding: 7px;
+}

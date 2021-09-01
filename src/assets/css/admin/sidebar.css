@@ -1,0 +1,267 @@
+@import url('../style.css');
+@import url('./admin.css');
+
+
+div[class=ctn-main-dash]{
+    position: relative;
+    margin-left: 250px;
+    background-color: var(--bg-admin);
+    font-family: var(--fuente-OPENSANS);
+    height: 100vh;
+    transition: all ease .3s;
+}
+    .btn__menu.admin{
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        left: 250px;
+        height: 60px;
+        width: 60px;
+        font-size: 1.3rem;
+        background: none;
+        color: var(--color-blanco);
+        border: none;
+        cursor: pointer;
+        transition: .3s ease all;
+    }
+    .navbar-align{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: var(--color-rojo-oscuro);
+        padding: 0 15px;
+
+        transition: all ease .3s;
+    }        
+        .item-navbar{
+            padding-right: 15px;
+            color: var(--color-blanco);
+            font-size: .85rem;
+            display: flex;
+            align-items: center;
+        }
+            .item-navbar .image{
+                width: 25px;
+                height:25px;
+                border: 2.5px solid var(--color-blanco);
+                border-radius: 50%;
+                margin-right: 15px;
+                overflow: hidden;
+            }
+                .image>img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;   
+                }
+                .item-navbar .name_user{
+                    font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+                }
+            .item-navbar .btn-unlogin{
+                width: 30px;
+                height: 30px;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                color: var(--color-blanco);
+                font-size: 1.3rem;
+                text-decoration: none;
+            }
+
+.aside-bar{
+    font-family: var(--fuente-OPENSANS);
+    width: 250px;
+    text-align: center;
+    background-color: var(--color-blanco);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+
+    transition: all ease .3s;
+}
+
+    .image-navbar{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        .image-navbar>img{
+            height: 60%;
+        }
+        
+    .aside-bar .legend{
+        color: var(--color-text-input);
+        font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+        font-size: .7rem;
+        text-align: start;
+        padding: 15px 0 7px 20px;
+    }
+    .item-aside{
+        display: flex;
+        align-items: center;
+        width: calc(100% - 30px);
+        padding: 12px 15px;
+        font-size: .85rem;
+        color: var(--color-text-negro-bajo);
+        font-weight: bold;
+        text-decoration: none;
+        position: relative;
+    } 
+        .item-aside .estado{
+            width: 7px;
+            height: 7px;    
+            border-radius: 50%;
+            background-color: var(--color-rojo-oscuro);
+            display: none;
+        }
+            .item-aside.active .estado{
+                display: block;
+            }
+        .item-aside.active{
+            background-color: var(--bg-admin-hv);
+            color: var(--color-rojo-oscuro);
+        }
+        .item-aside .icon-item{
+            margin: 0 20px;
+            font-size: 1.05rem;
+        }
+        .item-aside .topic-item, .item-aside-sub .topic-item{
+            margin: 0;
+        }
+        .down-more{
+            position: absolute;
+            right: 0;
+            margin-right: 25px;
+            font-size: 1.1rem;
+            transform: rotate(0deg);
+
+            transition: transform ease .5s;
+        }
+
+        /*sub item*/
+        .subitem-aside{
+            background: var(--bg-admin);
+            display: none;
+        }
+            .subitem-aside.active{
+                display: block;
+            }
+        .item-aside-sub{
+            font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+            display: flex;
+            align-items: center;
+            width: calc(100% - 30px);
+            padding: 12px 15px;
+            font-size: .8rem;
+            color: var(--color-text-negro-bajo);
+            text-decoration: none;
+            position: relative;
+        }
+            .item-aside-sub:hover:not(.item-aside-sub.active){
+                color: var(--color-rojo-oscuro);
+            }
+        .item-aside-sub.active{
+            color: var(--color-rojo-oscuro);
+            font-weight: bold;
+        }
+        .item-aside-sub .topic-item{
+            margin-left: 20px;
+        }
+        .item-aside-sub.active .topic-item{
+            margin-left: 15px;
+        }
+        .item-aside.view .down-more{
+            transform: rotate(180deg);
+        }
+
+
+/* REDUCIR EL TAMAÑO DEL SIDEBAR */
+#root.left-navbar .aside-bar{
+    width: 70px;
+}
+#root.left-navbar .btn__menu.admin{
+    left: 70px;
+}
+#root.left-navbar div[class=ctn-main-dash]{
+    margin-left: 70px;
+}
+
+#root.left-navbar .legend,#root.left-navbar .down-more,#root.left-navbar .topic-item:not(.topic-item.sub){
+    display: none;
+}
+    #root.left-navbar .container-item.view>.item-aside:not(.item-aside.active){
+        width: 300px;
+        background-color: var(--bg-admin-hv);
+        justify-content: left;
+    }
+    #root.left-navbar .container-item.view .item-aside.active .estado{
+        margin-left: 10px;
+    }
+    #root.left-navbar .container-item.view .item-aside.active{
+        justify-content: left;
+        width: 300px;
+    }
+        
+    #root.left-navbar .container-item.view .icon-item{
+        width: 70px;
+        margin: 0 25px 0 0;
+    }
+        #root.left-navbar .container-item.view .item-aside.active .icon-item{
+            width: 60px;
+        }
+
+    #root.left-navbar .container-item.view .topic-item{
+        display: block;
+    }
+#root.left-navbar .item-aside{
+    padding: 15px 0;
+    width: 100%;
+    justify-content: center;
+}
+#root.left-navbar .icon-item{
+    margin: 0 10px;
+    font-size: 1rem;
+}
+    /*sub items*/
+    #root.left-navbar .container-item{
+        position: relative;
+    }
+    #root.left-navbar .container-item.view .subitem-aside{
+        background-color: var(--bg-admin-hv);
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        z-index: 5;
+        width: 230px;
+        -webkit-box-shadow: 11px 11px 10px -1px rgba(61,13,15,0.5);
+        -moz-box-shadow: 11px 11px 10px -1px rgba(61,13,15,0.5);
+        box-shadow: 11px 11px 10px -1px rgba(61,13,15,0.5);
+    }        
+    #root.left-navbar .item-aside-sub{
+        justify-content: left;
+    }
+    #root.left-navbar .topic-item.sub{
+        margin-left: 15px;
+        text-align: left;
+    }
+
+/* -------------HOVER------------- */
+.item-aside:hover:not(.item-aside.active, .item-aside-sub){
+    background-color: var(--bg-admin);
+}
+#root.left-navbar .item-aside-sub:hover:not(.item-aside-sub.active){
+    background-color: var(--bg-admin-hv);
+}
+
+/* -------------VENTANA EMERGENTE REUTILIZABLE ADMINISTRACION------------- */
+#root.left-navbar .class-overlay{
+    left: 70px;
+}

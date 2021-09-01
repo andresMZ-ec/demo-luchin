@@ -1,0 +1,113 @@
+.grid_promo{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    grid-gap: 25px;
+    margin: 0 15px;
+}
+
+.card-prom-list{
+    padding: 20px 25px;
+    font-family: var(--fuente-OPENSANS);
+    display: flex;
+    flex-direction: column;
+}
+    .card-prom-list p{
+        margin: 0;
+    }
+
+.row_dt_prom, .row_buttons{
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--fuente-OPENSANS);
+    align-items: center;
+}
+        .row_dt_prom p{
+            margin-bottom: 7px;
+        }
+    .row_dt_prom .name_prom{
+        font-family: var(--fuente-OSWALD);
+        text-transform: uppercase;
+        color: var(--color-text-negro-bajo);
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+    }
+    .row_dt_prom .tick_prom{
+        font-weight: 600;
+        color: var(--color-text-input);
+        font-size: .95rem;
+    }
+    .row_dt_prom .desc_prom{
+        font-family: var(--fuente-OSWALD);
+        font-size: 1.3rem;
+        color: var(--color-text-negro-bajo);
+        text-align: end;
+        line-height: 1.5rem;
+    }
+    .row_dt_prom .status_prom{
+        color: var(--color-blanco);
+        font-weight: 600;
+        font-size: .7rem;
+        padding: 2px 10px;
+        border-radius: .5rem;
+        background-color: var(--color-brd-input);
+    }
+        .status_prom.act{
+            background-color: #00AB17;
+        }
+        .status_prom.desact{
+            background-color: var(--color-reprobado);
+        }
+        
+
+.row_dates_p{
+    flex: 0 1 auto;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+    .row_dates_p .ttl-date{
+        color: var(--color-text-negro-bajo);
+        font-weight: 600;
+        line-height: 90%;
+        margin-bottom: 7px;
+        font-size: .95rem;
+    }
+    .row_dates_p .date{
+        color: var(--color-text-input);
+        font-weight: 600;
+        font-size: .95rem;
+    }
+.row_descrip_prom{
+    flex: 1 1 auto;
+}
+    .row_descrip_prom>p{
+        margin: 15px 0 20px 0;
+        color: var(--color-text-input);
+        line-height: 1.2rem;
+        font-size: .85rem;
+    }
+
+.btn_edit-prom, .btn_eli_prom{
+    border: none;
+    width: 30%; height: 25px;
+    background: var(--color-amarillo);
+    color: var(--color-blanco);
+    border-radius: .3rem;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: .2s all ease;
+}
+.btn_eli_prom{
+    background: var(--color-rojo-oscuro);
+}
+
+    .btn_edit-prom:hover{
+        background: var(--color-amarillo-principal);
+    }
+    .btn_eli_prom:hover{
+        background: var(--color-rojo);
+    }

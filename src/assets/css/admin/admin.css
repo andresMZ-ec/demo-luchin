@@ -1,0 +1,166 @@
+/*ESTILOS PARA MAIN DE ADMINISTRACION*/
+main[class*='contenido-admin']{
+    overflow: hidden;
+    transition: all ease .3s;
+    padding-bottom: 40px;
+    font-family: var(--fuente-OPENSANS);
+}
+    .theme-apart{
+        background-color: var(--color-rojo-oscuro);
+        color: var(--color-blanco);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 75px;
+        padding: 0 30px 95px 30px;
+    }
+        .theme-apart>h2{
+            margin: 0;
+            font-size: 1.6rem;
+        }
+        .theme-apart .button_th_head{
+            border: none;
+            cursor: pointer;
+            background-color: var(--color-blanco);
+            color: var(--color-rojo-oscuro);
+            font-family: var(--fuente-OPENSANS);
+            font-size: .9rem;
+            height: 30px;
+            padding: 0 15px;
+            border-radius: .3rem;
+            margin-top: 25px;
+        }
+            .theme-apart .button_th_head:hover{
+                box-shadow: -5px 5px 0 -1px rgba(255,255,255,0.5);
+            }
+            .theme-apart .button_th_head>i{
+                margin-right: 10px;
+            }
+        main[class*='contenido-admin'] .container-main{
+            margin: -60px 30px 0 30px;
+            overflow: hidden;
+            min-height: 500px;
+        }
+        .bd__sect{
+            border-radius: 20px;
+            background-color: var(--color-blanco);
+            -webkit-box-shadow: -2px 12px 19px -16px rgba(0,0,0,0.75);
+            -moz-box-shadow: -2px 12px 19px -16px rgba(0,0,0,0.75);
+            box-shadow: -2px 12px 19px -16px rgba(0,0,0,0.75);
+        }
+
+/* ------subitulos de apartados----- */
+.title_card_cl{
+    font-family: var(--fuente-OSWALD);
+    font-weight: var(--weigth-OPENSANS-REGULAR-400);
+    margin: 0;
+    color: var(--color-text-negro);
+    font-size: 1.7vw;
+}
+
+/* estilos para **select** */
+.select-dash-sty{
+    outline: none;
+    border: 2px solid var(--color-brd-input);
+    font-size: 1vw;
+    font-family: var(--fuente-OPENSANS);
+    background-color: var(--color-blanco);
+    color: var(--color-text-negro-bajo);
+    font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+    border-radius: 7px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* estilos para labels de formularios */
+.labels-dash-sty{
+    color: var(--color-brd-input);
+    display: block;
+    font-size: 1vw;
+    font-family: var(--fuente-OPENSANS);
+}
+
+/* estilos para inputs de formularios administracion */
+.grup_field_dash{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 40px;
+}
+    .grup_field_dash .row_field_form{
+        grid-column-start: span 2;
+        margin: 0 0 7px 0;
+    }
+    .grup_field_dash .row_field_form.div{
+        grid-column-start: auto;
+    }
+.input-dash-sty{
+    display: block;
+    width: calc(100% - 30px);
+    font-size: 1vw;
+    border: none;
+    font-family: var(--fuente-OPENSANS);
+    border-bottom: 1px solid var(--color-brd-input);
+    padding: 10px 15px;
+    outline: none;
+    color: var(--color-text-negro-bajo);
+}
+
+/* estilos para textarea (descripcion) */
+.textarea-dash-sty{
+    width: calc(100% - 34px);
+    height: 100px;
+    resize: none;
+    outline: none;
+    border-radius: 7px;
+    padding: 15px;
+    font-family: var(--fuente-OPENSANS);
+    border: solid 2px var(--color-brd-input);
+    color: var(--color-text-negro-bajo);
+    margin-top: 10px;
+    font-size: 1vw;
+}
+
+/* estilos para boton de subir imagenes */
+.file_input_text {
+    position: relative;
+    background-color: var(--color-amarillo-principal);
+    color: var(--color-text-negro-bajo);
+    font-size: 1rem;
+    font-weight: bold;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+}
+    .file_input_text .file_text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        cursor: pointer;  
+        opacity: 0;
+        outline: none;
+        width: 100%;
+    }
+
+
+
+/* eventos de interaccion globales */
+.input-dash-sty:focus{
+    border-bottom: 2px solid var(--color-rojo-oscuro);
+}
+.textarea-dash-sty:focus, .select-dash-sty:focus{
+    border: 2px solid var(--color-rojo-oscuro);
+}
+.input-dash-sty::placeholder, .textarea-dash-sty::placeholder{
+    color: var(--color-text-negro-bajo);
+}
+
+.border-tables-ad{
+    padding: 20px 30px;    
+}

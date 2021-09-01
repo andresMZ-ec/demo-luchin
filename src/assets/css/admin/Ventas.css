@@ -1,0 +1,61 @@
+/* ------------PRIMERA FILA--------- */
+.row-ventas-flex{
+    display: grid;
+    grid-template-columns: 25% 70%;
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 0 15px 30px 15px;
+    font-family: var(--fuente-OPENSANS);
+}
+    /* -----------tarjetas de detalle------------- */
+    .cards_sales{
+        width: 75%;
+        margin: auto;
+    }
+        .ctn-card{
+            background-color: var(--color-blanco);
+            border-radius: .5rem;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: -7px 7px 0 -3px #9d0207d7;
+        }
+            .ctn-card p{
+                margin: 0;
+            }
+            .ctn-card .cant_cd{
+                font-family: var(--fuente-OSWALD);
+                line-height: 100%;
+                font-size: 1.7rem;
+            }
+            .ctn-card .tema_cd{
+                font-size: .9rem;
+                color: var(--color-text-input);
+                line-height: 1.5rem;
+                font-weight: 600;
+            }
+            .ctn-card .slogan_cd{
+                font-size: .85rem;
+                line-height: 1.2rem;
+                color: var(--color-reprobado);
+            }
+    /* --------------Tabla de clientes con mas compras---- */
+    .tb_cl_orders, .row_rk_sales{  /*no agregar mas cosas, */
+        padding: 20px 30px;         /* si agregas se aplican a ambas tablas */
+    }
+
+    .ct-table_customers table{
+        width: 100%;
+        margin: 25px 0;
+        text-align: left;
+    }
+
+
+/* -------tabla de ranking mas vendidos----- */
+/* codificar aqui */
+.ct_sales_tb table{
+    width: 100%;
+    margin: 25px 0;
+    text-align: center;
+
+}

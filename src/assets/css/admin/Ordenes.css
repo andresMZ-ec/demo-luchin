@@ -1,0 +1,80 @@
+
+/* ESTILOS VENTANA MODAL DE VER DETALLES DE ORDEN */
+.details-orders>div{
+  margin-bottom: 10px;
+}
+.details-orders .topic-dtll{
+  font-family: var(--fuente-OPENSANS);
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text-negro);
+  font-size: 1.05rem;
+  margin-bottom: 7px;
+}
+.details-orders .grid-dtll{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 30px;
+}
+.details-orders .sub_title{
+  color: var(--color-text-input);
+  margin: 0;
+  line-height: 100%;
+  font-size: .85rem;
+}
+.details-orders .item_text{
+  color: var(--color-text-negro-bajo);
+  margin: 7px 0;
+  line-height: 100%;
+  font-size: .9rem;
+}
+.details-orders table{
+  border-collapse: collapse;
+  font-family: var(--fuente-OPENSANS);
+  font-size: .85rem;
+}
+.details-orders thead th{
+  border-top: 1px solid var(--color-text-input);
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--color-text-input);
+  text-align: center;
+}
+.details-orders tbody td{
+  /* border-top: 1px solid var(--color-brd-input); */
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--color-brd-input);
+  text-align: center;
+}
+.details-orders .descr_prod{
+  text-align: start;
+}
+  .descr_prod>p{
+    margin: 0;
+  }
+  .descr_prod>p.produc_table{
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+.details-orders .prices{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-top: 20px;
+  font-family: var(--fuente-OPENSANS);
+}
+  .prices .flex-price{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 150px 70px;
+    text-align: start;
+  }
+  .prices .flex-price>span{
+    font-family: var(--fuente-OSWALD);
+    font-size: .95rem;
+  }
+  .prices .flex-price>p{
+    margin: 0;
+    margin-bottom: 7px;
+    font-weight: 600;
+    font-size: .9rem;
+  }

@@ -1,0 +1,134 @@
+footer{
+    width: 100%;
+    background-color: var(--color-vino);
+    padding-bottom: 40px;
+    font-family: var(--fuente-OPENSANS);
+}
+
+/* grid para dividir apartados */
+.grid-ftt{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 70px;
+    grid-column-gap: 50px;
+    font-family: var(--fuente-OPENSANS);
+    color: var(--color-blanco);
+}
+.column_grid-ftt{
+    margin-top: 20px;
+}
+.name__categoria{
+    font-size: 1.1rem;
+    color: var(--color-amarillo-principal);
+    font-family: var(--fuente-FRANKLIN);
+    font-weight: bolder;
+    margin: 0;
+    padding-top: 20px;
+}
+.content>img{
+    width: 70%;
+}
+.social{
+    padding: 20px 0 0 20px;
+    display: flex;
+}
+.social a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 15px;
+    text-decoration: none;
+    color: var(--color-blanco);
+    background-color: var(--color-vino);
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+    transition: all ease .1s;
+}
+    .social a:hover{
+        color: var(--color-amarillo);
+        box-shadow: 3px 3px 3px #faa307;
+    }
+
+.content .text{
+    font-size: .9rem;
+    font-weight: var(--weigth-OPENSANS-LIGTH-300);
+    margin: 5px 0 0 0;
+}
+    .text .weigth{
+        font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+    }
+    .content .text>a{
+        color: var(--color-blanco);
+        text-decoration: none;
+    }
+
+.bottom{
+    background-color: var(--color-blanco);
+    color: var(--color-vino);
+    padding: 10px 0;
+}
+.bottom .legend__ftt{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+}
+    .legend__ftt .credit{
+        margin: 7px 0;
+        width: 40%;
+    }
+    .legend__ftt .credit>.detalle{
+        font-family: var(--fuente-OPENSANS);
+        font-weight: var(--weigth-OPENSANS-REGULAR-400);
+    }
+
+
+@media only screen and (max-width:960px){
+    .grid-ftt{
+        padding: 30px 40px;
+    }
+    .name__categoria{
+        font-size: 1rem;
+    }
+    .content .text{
+        font-size: .75rem;
+    }
+}
+
+@media only screen and (max-width: 720px){
+    footer{
+        padding-bottom: 50px;
+    }
+    .grid-ftt{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .content>img{
+        width: 50%;
+    }
+    .social{
+        justify-content: center;
+        padding: 30px 20px 0 20px;
+    }
+        .social a{
+            color: var(--color-vino);   
+            background-color: var(--color-blanco);
+        }
+    .bottom .legend__ftt{
+        display: block;
+        font-size: .7rem;
+    }
+    .legend__ftt .credit{
+        width: 100%;
+        margin: 15px 0;
+        text-align: center;
+    }
+    .legend__ftt .credit>.detalle{
+        font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+    }
+}

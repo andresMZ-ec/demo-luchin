@@ -1,0 +1,99 @@
+@import url('../../../assets/css/style.css');
+
+/* .tables_admin{
+  padding: 20px 30px;
+} */
+.ct-table_admin{
+  overflow-y: auto;
+  overflow-x: auto;
+  /* min-height: 25rem; */
+  max-height: 70vh;
+  width: 100%;
+}
+.ct-table_admin table{
+  font-family: var(--fuente-OPENSANS);
+  max-width: 100%;
+  width: 100%;
+  margin: 25px 0;
+  text-align: left;
+  border-collapse: collapse;
+  color: var(--color-text-negro-bajo);
+}
+.ct-table_admin table thead th{
+  background-color: #ffff;
+  border-top: 1.3px solid var(--bg-admin-hv);
+  border-bottom: 1.7px solid var(--bg-admin-hv);
+  padding: 10px 15px;
+  font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+  white-space: nowrap;
+
+  position: sticky;
+  top: 0;
+}
+.ct-table_admin tbody td{
+  font-weight: var(--weigth-OPENSANS-REGULAR-400);
+  color: var(--color-text-input);
+  padding: .75rem;
+  white-space: nowrap;
+}
+
+.ct-table_admin table tbody tr:hover{
+  background-color: rgba(0, 0, 0, .04);
+}
+/*  =====================================================
+ESTILOS PARA BOTONES DE ACTION DE LA TABLA 
+=====================================================*/
+.ct-table_admin .action_table{
+  text-align: end;
+}
+.action_table>button[class*='table-']{  
+  border: none;
+  border-radius: .3rem;
+  padding: 4px 12px;
+  font-family: var(--fuente-OPENSANS);
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 14px;
+  color: #ffff;
+}
+.action_table button.table-edit{
+  color: var(--color-text-negro-bajo);
+}
+.action_table button.table-delete{
+  color: var(--color-text-negro-bajo);
+}
+.action_table button.table-view{
+  font-weight: 600;
+  background-color: rgb(4, 94, 213);
+}
+  .action_table .table-edit:hover{background-color: var(--color-amarillo-principal); color: #ffff;}
+  .action_table .table-delete:hover{background-color: var(--color-reprobado); color: #ffff;}
+  .action_table .table-view:hover{background-color: rgb(0, 74, 171)}
+
+
+/* ==================================================
+ESTILOS PARA ESTADOS (ESTRAGAD, ACTIVO, PENDIENTE, ....) 
+=====================================================*/
+.ct-table_admin td[class*=status-]>span{
+  background-color: rgba(0, 0, 0, .2);
+  padding: 3px 7px;
+  border-radius: .4rem;
+  font-size: 14px;
+  color: #ffff;
+}
+  /* estado de color verde */
+  .ct-table_admin td.status-activo>span,
+  .ct-table_admin td.status-entregado>span{ 
+    background-color: var(--color-aprobado); 
+  }
+
+  /* ---estado de color rojo */
+  .ct-table_admin td.status-desactivado>span,
+  .ct-table_admin td.status-cancelado>span{ 
+    background-color: var(--color-reprobado); 
+  }
+
+  /* ---estado de color amarillo */
+  .ct-table_admin td.status-pendiente>span{ 
+    background-color: var(--color-amarillo-principal); 
+  }

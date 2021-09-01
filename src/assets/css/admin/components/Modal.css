@@ -1,0 +1,151 @@
+/* -------------VENTANA EMERGENTE REUTILIZABLE ADMINISTRACION------------- */
+.class-overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 250px;
+  right: 0;
+  background-color: rgba(0, 0, 0, .3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all ease .3s;
+
+  visibility: hidden;
+}
+  .class-overlay.active{
+    visibility: visible;
+  }
+  .class-overlay .modal-reut{
+      background-color: var(--color-blanco);
+      padding: 1.3rem 2rem;
+      /* min-width: 40%; */
+      max-width: 80%;
+      transform: scale(0);
+      opacity: 0;
+      transition: .5s ease all;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+  }
+    .modal-reut::-webkit-scrollbar{
+        display: none;
+    }
+    .class-overlay.active .modal-reut{
+        transform: scale(1);
+        opacity: 1;
+    }
+  .modal-reut .head-modal{
+      position: relative;
+      display: flex;
+      width: 100%;
+  }
+      .modal-reut .button-close-modal{
+          padding: 0;
+          width: 25px;
+          height: 25px;
+          border: none;
+          background-color: transparent;
+          color: var(--color-amarillo);   
+          font-size: 2.7vw; 
+          cursor: pointer;
+
+          position: absolute;     
+          top: 0;
+          right: 0;
+          transition: .3 ease all;
+      }
+          .button-close-modal:hover{
+              font-size: 2.6vw;
+              color: var(--color-rojo-oscuro);      
+          }
+  .details-modal-inf{
+      padding: 10px;      
+  }
+  .actions-modals{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      padding: 15px 0;
+  }
+    .actions-modals>button.btn-modal{
+        border: none;
+        cursor: pointer;
+        font-family: var(--fuente-OPENSANS);
+        font-size: 0.85rem;
+        height: 33px;
+        padding: 0 15px;
+        border-radius: 7px;
+        font-weight: 600;
+        margin: 0 6px;
+    }
+        button.btn-modal.yellow{
+            background-color: var(--color-amarillo-principal);
+            color: var(--color-text-negro-bajo);
+        }
+            button.btn-modal.yellow:hover{
+                background-color: var(--color-amarillo);
+                color: var(--color-blanco);
+            }
+        button.btn-modal.blue{
+            background-color: rgb(0, 74, 171);
+            color: var(--color-blanco);
+        }
+            button.btn-modal.blue:hover{
+                background-color: rgb(3, 117, 204);
+            }
+        button.btn-modal.red{
+            background-color: var(--color-reprobado);
+            color: var(--color-blanco);
+        }
+            button.btn-modal.red:hover{
+                background-color: var(--color-rojo-oscuro);
+            }
+  
+/* ---------------------------------------- */
+.container-form{
+  width: 700px;
+}
+  .items-form{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 50px;
+      grid-row-gap: 0;
+  }
+  .items-form div[class*=field-cont]{
+      margin-bottom: 13px;
+  }
+      .items-form .field-cont-2{
+          grid-column-start: span 2;
+      }
+  .container-form .row-botones_form{
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  button[class*=button_modal]{
+      border: none;
+      cursor: pointer;
+      font-family: var(--fuente-OPENSANS);
+      font-size: 0.9rem;
+      height: 35px;
+      padding: 0 15px;
+      border-radius: 7px;
+      font-weight: 600;
+  }
+      .row-botones_form .button_modal.cancel{
+          background-color: var(--color-reprobado);
+          color: var(--color-blanco);
+      }
+          .row-botones_form .button_modal.cancel:hover{
+              background-color: var(--color-rojo-oscuro);
+          }
+      .row-botones_form .button_modal.submit{
+          background-color: var(--color-amarillo-principal);
+          color: var(--color-text-negro-bajo);
+      }
+          .row-botones_form .button_modal.submit:hover{
+              background-color: var(--color-aprobado);
+              color: var(--color-blanco);
+          }

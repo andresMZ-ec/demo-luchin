@@ -1,0 +1,109 @@
+@import url('../style.css');
+
+.conte_client{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 15px;
+  grid-gap: 30px;
+}
+.conte_client .column-order{
+  padding: 20px 30px;
+}
+
+
+/*agregar porducto*/
+.detalle_order_row.list{
+  padding: 15px 0 10px 0;
+  font-family: var(--fuente-OPENSANS);
+}
+  .detalle_order_row.list .comidas{
+      padding: 20px;
+      border-radius: 5px;
+      display: block;
+      justify-content: center;
+      color: var(--color-text-negro-bajo);
+      font-size: .9vw;
+  }
+  .detalle_order_row.list .comidas .tr-product_order{
+      margin: 0 auto;
+      width: 90%;
+      display: grid;  
+      grid-template-columns: 50% 30% 20%;
+      margin-bottom: 10px;
+  }
+      .tr-product_order .desc_order{
+          display: flex;
+          align-items: center;
+      }
+      .tr-product_order .cant_order{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+          .tr-product_order .cant_order>input{
+              border: none;
+              outline: none;
+              width: 20px;       
+              text-align: center;         
+          }
+          .tr-product_order .cant_order>button{
+              background-color: var(--color-amarillo-principal);
+              border: none;
+              color: var(--color-text-negro-bajo);
+              font-weight: bold;
+              width: 17px;
+              height: 17px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: bold;
+              font-size: 1rem;
+              cursor: pointer;
+          }
+      .tr-product_order .price_order{
+          font-family: var(--fuente-OSWALD);
+          align-items: center;
+          display: flex;
+          justify-content: center;
+      }
+
+      
+  .btn-add-deta{
+      width: 100%;
+      border-radius: 5px;
+      background-color: var(--color-amarillo-principal);
+      color: var(--color-text-negro-bajo);
+      font-weight: var(--weigth-OPENSANS-SEMIBOLD-600);
+      cursor: pointer;
+      border: none;
+      padding: 10px 15px;
+  }
+/*precio,estado y boton*/
+.detalle_order_row.pago{
+  margin: 0 0 5px auto;
+  width: 175px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  .detalle_order_row.pago .topic{
+      font-size: 1.1vw;
+      font-weight: var(--weigth-OSWALD-SEMIBOLD-600);
+  }
+  .detalle_order_row.pago .data-resume{
+      font-family: var(--fuente-OSWALD);
+      font-size: 1.2vw;
+  }
+
+/* ---------------------- */
+  .btn-add-deta-orden{
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-rojo-oscuro);
+  color: var(--color-blanco);
+  font-family: var(--fuente-OPENSANS);
+  font-size: .9rem;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 10px 15px;
+}
