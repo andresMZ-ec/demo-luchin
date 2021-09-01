@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b3ec9def.chunk.css",
+    "main.js": "/static/js/main.bde061e3.chunk.js",
+    "main.js.map": "/static/js/main.bde061e3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0eeb7ab2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0eeb7ab2.js.map",
+    "static/js/2.f8001a34.chunk.js": "/static/js/2.f8001a34.chunk.js",
+    "static/js/2.f8001a34.chunk.js.map": "/static/js/2.f8001a34.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b3ec9def.chunk.css.map": "/static/css/main.b3ec9def.chunk.css.map",
+    "static/js/2.f8001a34.chunk.js.LICENSE.txt": "/static/js/2.f8001a34.chunk.js.LICENSE.txt",
+    "static/media/copia.99c792c3.jpg": "/static/media/copia.99c792c3.jpg",
+    "static/media/delivery.ec116fd3.png": "/static/media/delivery.ec116fd3.png",
+    "static/media/error-6482984_1280.091b5d1a.png": "/static/media/error-6482984_1280.091b5d1a.png",
+    "static/media/hamburguesas.015d24e4.jpg": "/static/media/hamburguesas.015d24e4.jpg",
+    "static/media/logo-luchin.23d92da9.svg": "/static/media/logo-luchin.23d92da9.svg",
+    "static/media/luchin-blanco-concept.78cf4d19.svg": "/static/media/luchin-blanco-concept.78cf4d19.svg",
+    "static/media/luchin-vino-concept.5941bcb1.svg": "/static/media/luchin-vino-concept.5941bcb1.svg",
+    "static/media/orderOK.1ae117bb.gif": "/static/media/orderOK.1ae117bb.gif",
+    "static/media/orderTransacc.c415d8e4.gif": "/static/media/orderTransacc.c415d8e4.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0eeb7ab2.js",
+    "static/js/2.f8001a34.chunk.js",
+    "static/css/main.b3ec9def.chunk.css",
+    "static/js/main.bde061e3.chunk.js"
+  ]
+}
